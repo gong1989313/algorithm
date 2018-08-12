@@ -1,1 +1,11 @@
-/target/
+.classpath
+.project
+.settings/
+logs/
+target/
+*.class
+*.jar
+*.swp
+.DS_Store
+nohup.out
+dump.rdb
