@@ -9,6 +9,7 @@ public class ShellSortion {
 		System.out.println("排序前：" + Arrays.toString(arr));
 		// sort(arr);
 		sortBak(arr);
+		sortTest(arr);
 		System.out.println("排序后：" + Arrays.toString(arr));
 	}
 
@@ -34,6 +35,24 @@ public class ShellSortion {
 	private static void sortBak(int[] arr) {
 		int N = arr.length;
 		int d = N / 2;
+		while (d >= 1) {
+			for (int i = d; i < N; i++) {
+				int key = arr[i];
+				int j = i - d;
+				while (j >= 0 && key < arr[j]) {
+					arr[j + d] = arr[j];
+					j = j - d;
+				}
+				arr[j + d] = key;
+			}
+			d = d / 2;
+		}
+	}
+
+	public static void sortTest(int[] arr) {
+		int N = arr.length;
+		int d = N / 2;
+
 		while (d >= 1) {
 			for (int i = d; i < N; i++) {
 				int key = arr[i];
