@@ -3,7 +3,6 @@ package com.gxq.learn.algorithm.sort;
 import java.util.Arrays;
 
 public class MergeSortDemo {
-
 	private static void sort(int[] arr) {
 		int N = arr.length;
 		int[] temp = new int[N];
@@ -23,7 +22,6 @@ public class MergeSortDemo {
 		int i = low;
 		int j = mid + 1;
 		int k = 0;
-
 		while (i <= mid && j <= high) {
 			if (arr[i] <= arr[j]) {
 				temp[k++] = arr[i++];
@@ -31,22 +29,24 @@ public class MergeSortDemo {
 				temp[k++] = arr[j++];
 			}
 		}
+
 		while (i <= mid) {
 			temp[k++] = arr[i++];
 		}
+
 		while (j <= high) {
 			temp[k++] = arr[j++];
 		}
+		
 		k = 0;
-		while (low <= high) {
+		while(low<=high) {
 			arr[low++] = temp[k++];
 		}
 	}
 
 	public static void main(String[] args) {
-		 int arr[] = { 32, 24, 95, 45, 75, 22, 95, 49, 3, 76, 56, 11, 37, 58, 44, 19,
-		 81 };
-		//int arr[] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+		int arr[] = { 32, 24, 95, 45, 75, 22, 95, 49, 3, 76, 56, 11, 37, 58, 44, 19, 81 };
+		// int arr[] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 		System.out.println("排序前：" + Arrays.toString(arr));
 		sort(arr);
 		System.out.println("排序后：" + Arrays.toString(arr));
