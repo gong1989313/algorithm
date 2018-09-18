@@ -2,7 +2,7 @@ package com.gxq.learn.algorithm.sort;
 
 import java.util.Arrays;
 
-public class Insertion {
+public class InsertSortion {
 
 	public static void main(String[] args) {
 		int[] arr = { 9, 5, 6, 7, 2, 3, 4, 8, 1 };
